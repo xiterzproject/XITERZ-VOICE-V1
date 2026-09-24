@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>XITERZ VOICE V1</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="app">
+  <header>
+    <div class="brand">XITERZ <span>VOICE</span></div>
+    <div id="connection" class="status offline">OFFLINE</div>
+  </header>
+
+  <section id="joinPanel" class="panel">
+    <h1>Voice Room</h1>
+    <p class="muted">Ngobrol suara realtime bareng squad.</p>
+    <input id="name" maxlength="20" placeholder="Nama kamu">
+    <input id="room" maxlength="24" placeholder="Kode room, contoh: MABAR01">
+    <div class="row">
+      <button id="createBtn" class="primary">BUAT ROOM</button>
+      <button id="joinBtn">JOIN ROOM</button>
+    </div>
+    <p id="joinError" class="error"></p>
+  </section>
+
+  <section id="roomPanel" class="panel hidden">
+    <div class="roomHead">
+      <div>
+        <h2 id="roomTitle">Room</h2>
+        <div id="roomCode" class="muted"></div>
+      </div>
+      <button id="copyBtn">SALIN KODE</button>
+    </div>
+
+    <div id="members" class="members"></div>
+
+    <div class="controls">
+      <button id="muteBtn" class="control">MIC ON</button>
+      <button id="leaveBtn" class="danger">LEAVE ROOM</button>
+    </div>
+    <p id="roomMessage" class="muted"></p>
+  </section>
+</div>
+
+<audio id="audioSink" autoplay></audio>
+<script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,13 @@
+{
+  "name": "xiterz-voice-v1",
+  "version": "1.0.0",
+  "private": true,
+  "description": "XITERZ VOICE V1 - realtime WebRTC voice rooms",
+  "main": "server/server.js",
+  "scripts": {
+    "start": "node server/server.js"
+  },
+  "dependencies": {
+    "ws": "^8.18.3"
+  }
+}
