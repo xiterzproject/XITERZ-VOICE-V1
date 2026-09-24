@@ -104,6 +104,6 @@ wss.on("connection", ws => {
   ws.on("close", () => leave(ws));
 });
 
-server.listen(PORT, () => {
+server.listen(PORT, "0.0.0.0", () => {
   console.log(`XITERZ VOICE running on http://localhost:${PORT}`);
 });
